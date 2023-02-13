@@ -1,0 +1,11 @@
+﻿@*@inject AuthenticationStateProvider AuthenticationStateProvider
+
+<button @onclick="Login">Log in</button>
+
+@code
+{
+    public async Task Login()
+    {
+        await ((ExternalAuthStateProvider)AuthenticationStateProvider).LogInAsync();
+    }
+}*@

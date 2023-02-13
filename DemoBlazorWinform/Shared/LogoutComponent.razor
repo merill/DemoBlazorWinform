@@ -1,0 +1,11 @@
+﻿@*@inject AuthenticationStateProvider AuthenticationStateProvider
+
+<button @onclick="Logout">Log out</button>
+
+@code
+{
+    public async Task Logout()
+    {
+        ((ExternalAuthStateProvider)AuthenticationStateProvider).Logout();
+    }
+}*@
